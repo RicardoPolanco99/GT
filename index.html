@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Minimalista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#home">Inicio</a>
+        <a href="#services">Organizadores de la GT Academy</a>
+        <div class="submenu">
+            <a href="#service1">calendario</a>
+            <a href="#service2">Temporadas</a>
+            <a href="#service3">Galeria</a>
+        </div>
+        <a href="#contact">Unete al grupo de discord</a>
+    </div>
+    <div id="bienvenida">
+        BIENVENIDO A LA GT ACADEMY
+    </div>
+    <div id="reloj">La hora es:</div> <!-- Reloj con el texto -->
+    <main>
+        <script>
+            function actualizarReloj() {
+                const ahora = new Date();
+                const horas = ahora.getHours().toString().padStart(2, '0');
+                const minutos = ahora.getMinutes().toString().padStart(2, '0');
+                const segundos = ahora.getSeconds().toString().padStart(2, '0');
+                document.getElementById('reloj').innerHTML = `La hora es: ${horas}:${minutos}:${segundos}`;
+            }
+    
+            setInterval(actualizarReloj, 1000);
+        </script>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
